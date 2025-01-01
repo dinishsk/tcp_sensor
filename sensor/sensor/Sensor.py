@@ -25,7 +25,7 @@ class Sensor(Node):
         try:
             self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.get_logger().info("Trying to Connect to TCP Server")
-            self.s.connect(("",2001))
+            self.s.connect(("",2000))
             self.timer = self.create_timer(0.1, self.callback)
         except:
             self.get_logger().error("Could not connect to server")
